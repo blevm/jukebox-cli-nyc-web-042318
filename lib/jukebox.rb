@@ -47,9 +47,19 @@ def run(songs)
   help
   puts "Please enter a command:"
   method_selection = gets.chomp
-  until method_selection == "help" || "list" || "play" || "exit"
-    puts "Please enter a command:"
-    method_selection = gets.chomp
-  end
 
+  if method_selection == "list"
+    list(songs)
+  elsif method_selection == "help"
+    help
+  elsif method_selection == "play"
+    play(songs)
+  elsif method_selection == "exit"
+    exit_jukebox
+  else
+    until method_selection == "help" || "list" || "play" || "exit"
+      puts "Please enter a command:"
+      method_selection = gets.chomp
+    end
+  end
 end
