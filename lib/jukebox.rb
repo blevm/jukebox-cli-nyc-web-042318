@@ -44,5 +44,12 @@ def play(songs)
 end
 
 def run(songs)
+  help
+  puts "Please enter a command:"
+  method_selection = gets.chomp
+  until method_selection == "help" || "list" || "play" || "exit"
+    puts "Please enter a command:"
+    method_selection = gets.chomp
+  end
 
 end
