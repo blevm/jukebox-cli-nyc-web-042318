@@ -40,8 +40,8 @@ def play(songs)
     end
   elsif songs.include?(users_input.to_s.downcase)
     puts "Playing #{songs[users_input]}"
-  #else
-    #puts "Invalid input, please try again"
+  else
+    puts "Invalid input, please try again"
   end
 end
 
