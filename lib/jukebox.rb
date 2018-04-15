@@ -34,7 +34,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   users_input = gets.chomp
-  if users_input === Integer
+  if users_input == Integer
     if users_input.between?(1,9)
       puts "Playing #{songs[users_input.to_i-1]}"
     end
