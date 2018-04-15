@@ -34,8 +34,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   users_input = gets.chomp
-  if Integer(users_input)
-    if users_input.between?(1,9)
+    if users_input.to_i.between?(1,9)
       puts "Playing #{songs[users_input.to_i-1]}"
     end
   elsif songs.include?(users_input.to_s.downcase)
