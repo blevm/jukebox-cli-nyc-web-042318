@@ -36,7 +36,7 @@ def play(songs)
   users_input = gets.chomp
   if users_input === Integer && users_input.between?(0,8)
       puts "Playing #{songs[users_input.to_i-1]}"
-  elsif songs.include?(users_input)
+  elsif songs.include?(users_input.to_s.downcase)
     puts "Playing #{songs[users_input]}"
   else
     puts "Invalid input, please try again"
